@@ -28,8 +28,10 @@ Vagrant.configure("2") do |config|
 
   # Enable provisioning with Ansible.
   config.vm.provision "ansible" do |ansible|
+    ansible.limit = "docker"
     ansible.compatibility_mode = "2.0"
     ansible.playbook = "ansible/main.yml"
+    ansible.inventory_path = "ansible/inventories/vbox"
   end
 
 

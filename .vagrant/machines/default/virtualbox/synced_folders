@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant/download":{"create":true,"guestpath":"/vagrant/download","hostpath":"/home/buldozzer/DemoLabs/waf-master/download","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/buldozzer/DemoLabs/waf-master","disabled":false,"__vagrantfile":true}}}
