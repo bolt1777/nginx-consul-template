@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: yes
+
+  roles:
+    - role: ansible-role-repo-epel
+    - role: common
+
+- hosts: docker
+  become: yes
+  
+  vars:
+    pip_install_packages:
+      - name: docker
+   
+  roles:
+    - role: ansible-role-pip
+    - role: ansible-role-docker
+    - role: consul

@@ -1,0 +1,12 @@
+- name: install packages
+  become: yes
+  become_method: sudo
+  yum: name={{item}} state=present
+  with_items:
+        - '{{ common_packages }}'
+
+- name: disable firewall
+  become: yes
+  become_method: sudo
+  raw: "systemctl disable firewalld && systemctl stop firewalld"
+
