@@ -1,0 +1,10 @@
+# Generel
+.idea/
+.DS_Store
+
+# Project
+.vagrant/
+download/
+
+# Ansible
+cluster.retry
