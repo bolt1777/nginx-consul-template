@@ -1,5 +1,3 @@
-# waf-master
-
 ## Installation
 
 ```bash
@@ -19,7 +17,10 @@ This setting will create URL like this which can be accessed from your PC:
 curl http://docker.waf/ip-api
 ```
 
+## Consul - Dashboard
+
+http://docker.waf:8500/
+
 ## Roles
-The roles:
-Consul - run Consul container
-Nginx-Proxy - builds and run Nginx proxy container with Consul-Template included
+- Consul - run Consul container
+- Nginx-Proxy - builds and run Nginx proxy container with Consul-Template included
