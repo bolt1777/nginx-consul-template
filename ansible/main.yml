@@ -17,3 +17,4 @@
     - role: ansible-role-pip
     - role: ansible-role-docker
     - role: consul
+    - role: nginx-proxy

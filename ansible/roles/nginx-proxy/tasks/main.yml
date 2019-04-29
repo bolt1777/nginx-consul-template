@@ -1,0 +1,22 @@
+---
+- name: upload the files to the docker host
+  synchronize: src=docker-image dest=/tmp
+  register: sync_result
+
+- name: Build Docker image for nginx proxy
+  docker_image:
+    name: nginx-consul-template
+    path: /tmp/docker-image
+    state: build
+
+- name: Run Nginx proxy container
+  docker_container:
+    name: nginx-consul-template
+    networks:
+        - name: waf-center
+    image: nginx-consul-template
+    restart_policy: always
+    state: started
+    ports:
+       - 80:80
+

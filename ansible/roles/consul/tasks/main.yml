@@ -1,18 +1,20 @@
 ---
-- name: Pull Consul image
-  docker_image:
-        name: consul
-        tag: latest
+- name: Create a network
+  docker_network:
+    name: waf-center
 
 - name: Run Consul container        
   docker_container:
-    name: consul-docker-ct
-    image: consul  
+    name: consul
+    networks: 
+        - name: waf-center
+    image: progrium/consul 
     restart_policy: always
     state: started
-    command: agent -ui -server -bind 0.0.0.0 -client 0.0.0.0 -bootstrap-expect=1 
+    command: -server -bootstrap -ui-dir /ui
     ports:
+        - 8400:8400
         - 8500:8500
-        - 8600:8600/udp 
+        - 8600:53/udp 
            
 
