@@ -22,5 +22,5 @@ curl http://docker.waf/ip-api
 http://docker.waf:8500/
 
 ## Roles
-- Consul - run Consul container
-- Nginx-Proxy - builds and run Nginx proxy container with Consul-Template included
+- Consul - deploys and runs Consul container
+- Nginx-Proxy - builds and runs Nginx proxy container with Consul-Template included
