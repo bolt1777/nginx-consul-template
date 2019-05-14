@@ -1,8 +1,8 @@
 ## Installation
 
 ```bash
-git clone https://github.com/dmarych/waf-master.git
-cd waf-master
+git https://github.com/dmarych/nginx-consul-template.git
+cd nginx-consul-template
 vagrant plugin install vagrant-hostmanager
 vagrant up
 ```
