@@ -1,7 +1,7 @@
 ## Installation
 
 ```bash
-git clone git@bitbucket.org:xelonoperations/waf-master.git
+git clone https://github.com/dmarych/waf-master.git
 cd waf-master
 vagrant plugin install vagrant-hostmanager
 vagrant up
